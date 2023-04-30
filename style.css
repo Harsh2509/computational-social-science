@@ -41,6 +41,7 @@ p{
     display: flex;
     justify-content: right;
     position: sticky;
+    z-index: 3;
     top: 0;
 }
 
@@ -66,18 +67,18 @@ p{
 }
 
 .about{
-    width: 100%;
-    text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
 .row{
-    margin: auto;
-    width: 80%;
     display: flex;
     justify-content: space-between;
     text-align: left;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 7%;
+    width: 100%;
 }
 
 .about-content{
@@ -87,6 +88,7 @@ p{
 .about-content h1{
     font-weight: 500;
     font-size: 50px;
+    word-spacing: 2px;
 }
 
 .about-content p{
@@ -110,6 +112,80 @@ p{
         display: none;
     }
 }
+
+
+
+/* -------------People------------- */
+.people 
+{
+    width: 80%;
+    margin: auto;
+    padding: 5%;
+}
+
+.people-heading h1{
+    font-size: 50px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.people-heading h1::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 80%;
+    background-color: black;
+    margin-left: 3px;
+}
+
+.people-container{
+    flex-basis: 46%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color:#fff3f3;
+    padding: 20px 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    min-height: 50%;
+}
+.people-container:hover{
+    box-shadow: 0 0 15px rgba(182, 181, 181, 0.745);
+}
+
+
+.people-container img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.people-content{
+    padding-left: 15px;
+}
+
+.people-content h3{
+    font-size: 20px;
+}
+.people-content h4{
+    padding-top: 4px;
+    font-weight: 500;
+}
+.people-content p{
+    padding-top: 10px;
+}
+.people-content .people-icons{
+    padding-top: 10px;
+    transform: translateX(28%);
+}
+.people-icons .fa-brands{
+    margin-left: 3px;
+    transition-duration: 0.2s;
+}
+
+/* ------------------FOOTER------------------ */
 
 .footer{
     width: 100%;
@@ -136,7 +212,7 @@ p{
     transform: scale(1.5);
 }
 
-.footer-content .fa-brands:hover{
+.fa-brands:hover{
     color: blue;
     cursor: pointer;
 }
